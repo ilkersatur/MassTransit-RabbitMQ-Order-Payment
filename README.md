@@ -59,27 +59,36 @@ MassTransit is used for asynchronous communication between these services via Ra
    - MassTransit is integrated with RabbitMQ to handle the asynchronous communication.
    - The `ISendEndpoint` and `IReceiveEndpoint` interfaces are used to send and receive messages between the services.
 
-   Example of configuration in `Startup.cs`:
+   Example of configuration in `Program.cs`:
 
    ```csharp
-   services.AddMassTransit(x =>
+   builder.Services.Configure<MassTransitSettings>(builder.Configuration.GetSection("MassTransitSettings"));
+   builder.Services.AddMassTransit(x =>
    {
-       x.AddConsumer<PaymentConsumer>();
-       x.AddConsumer<NotificationConsumer>();
-       x.UsingRabbitMq((context, cfg) =>
-       {
-           cfg.Host("rabbitmq://localhost");
-           cfg.ReceiveEndpoint("order_queue", e =>
-           {
-               e.ConfigureConsumer<OrderConsumer>(context);
-           });
-           cfg.ReceiveEndpoint("payment_queue", e =>
-           {
-               e.ConfigureConsumer<PaymentConsumer>(context);
-           });
-           cfg.ReceiveEndpoint("notification_queue", e =>
-           {
-               e.ConfigureConsumer<NotificationConsumer>(context);
-           });
-       });
+    x.RegisterConsumer<OrderPaymentReceivedEventConsumers>();
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        var massTransitSettings = context.GetRequiredService<IOptions<MassTransitSettings>>().Value;
+        cfg.Host(massTransitSettings.Host, massTransitSettings.VirtualHost, host =>
+        {
+            host.Username(massTransitSettings.Username);
+            host.Password(massTransitSettings.Password);
+        });
+       cfg.RegisterQueue<OrderPaymentReceivedEventConsumers>(context, massTransitSettings.QueueName, typeof(OrderPaymentReceivedEvent));
+    });
    });
+
+![Screenshot 1](https://github.com/ilkersatur/MassTransit-RabbitMQ-Order-Payment/blob/main/MassTransit-RabbitMQ-Order-Payment/Screenshot%202024-11-17%20180438.png?raw=true)
+
+![Screenshot 2](https://github.com/ilkersatur/MassTransit-RabbitMQ-Order-Payment/blob/main/MassTransit-RabbitMQ-Order-Payment/Screenshot%202024-11-17%20180459.png?raw=true)
+
+![Screenshot 3](https://github.com/ilkersatur/MassTransit-RabbitMQ-Order-Payment/blob/main/MassTransit-RabbitMQ-Order-Payment/Screenshot%202024-11-17%20180505.png?raw=true)
+
+![Screenshot 4](https://github.com/ilkersatur/MassTransit-RabbitMQ-Order-Payment/blob/main/MassTransit-RabbitMQ-Order-Payment/Screenshot%202024-11-17%20180508.png?raw=true)
+
+![Screenshot 5](https://github.com/ilkersatur/MassTransit-RabbitMQ-Order-Payment/blob/main/MassTransit-RabbitMQ-Order-Payment/Screenshot%202024-11-17%20180511.png?raw=true)
+
+![Screenshot 6](https://github.com/ilkersatur/MassTransit-RabbitMQ-Order-Payment/blob/main/MassTransit-RabbitMQ-Order-Payment/Screenshot%202024-11-17%20180515.png?raw=true)
+
+![Screenshot 7](https://github.com/ilkersatur/MassTransit-RabbitMQ-Order-Payment/blob/main/MassTransit-RabbitMQ-Order-Payment/Screenshot%202024-11-17%20180518.png?raw=true)
+
