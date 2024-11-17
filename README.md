@@ -1,8 +1,8 @@
-# Project Documentation: Order Creation, Payment, and Notification System with MassTransit and RabbitMQ in .NET Core
+# Project Documentation: Order Creation, Payment, and Notification with MassTransit and RabbitMQ in .NET Core, Docker
 
 ## Overview
 
-This project demonstrates the integration of MassTransit and RabbitMQ in a .NET Core application to manage order creation, payment processing, and sending SMS and email notifications. The system involves multiple services working together to simulate a real-world order processing and notification flow. RabbitMQ is used for message queuing, ensuring decoupled communication between services. MassTransit is employed to simplify message-based communication and to manage the message-driven workflows.
+This project demonstrates the integration of MassTransit and RabbitMQ in a .NET Core application to manage order creation, payment processing, and sending SMS and email notifications. The system involves multiple services working together to simulate a real-world order processing and notification flow. RabbitMQ, running in a Docker container, is used for message queuing, ensuring decoupled communication between services. MassTransit is employed to simplify message-based communication and to manage the message-driven workflows.
 
 ---
 
@@ -28,8 +28,7 @@ MassTransit is used for asynchronous communication between these services via Ra
 - **MassTransit**: A .NET-based service bus for building message-based applications.
 - **RabbitMQ**: A message broker that handles the transmission of messages between services.
 - **.NET Core**: Framework used to build the application and the individual services.
-- **SMTP**: For sending email notifications.
-- **SMS Provider (e.g., Twilio)**: For sending SMS notifications.
+- **Docker**: Application management in a container-based environment.
 
 ---
 
@@ -48,7 +47,6 @@ MassTransit is used for asynchronous communication between these services via Ra
    - The Notification Service receives the payment success message and sends SMS and email notifications to the customer, confirming the successful order and payment.
 
 ---
-
 ## MassTransit & RabbitMQ Integration
 
 1. **Setting up RabbitMQ**:
@@ -91,4 +89,14 @@ MassTransit is used for asynchronous communication between these services via Ra
 ![Screenshot 6](https://github.com/ilkersatur/MassTransit-RabbitMQ-Order-Payment/blob/main/MassTransit-RabbitMQ-Order-Payment/Screenshot%202024-11-17%20180515.png?raw=true)
 
 ![Screenshot 7](https://github.com/ilkersatur/MassTransit-RabbitMQ-Order-Payment/blob/main/MassTransit-RabbitMQ-Order-Payment/Screenshot%202024-11-17%20180518.png?raw=true)
+
+
+### RabbitMQ Installation with Docker
+
+1. Download and install Docker on your computer from: [Docker Desktop](https://www.docker.com/products/docker-desktop)
+
+2. To install RabbitMQ with Docker, use the following command:
+
+```bash
+docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 
