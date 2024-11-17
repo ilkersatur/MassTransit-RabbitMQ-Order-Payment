@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "pXBuV1UGg6bg3QC0tAGikPrSEB4X/0F9F1vSX97Ap8M=",
+  "Source": "CodeApp.Notification.Service",
+  "BasePath": "_content/CodeApp.Notification.Service",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

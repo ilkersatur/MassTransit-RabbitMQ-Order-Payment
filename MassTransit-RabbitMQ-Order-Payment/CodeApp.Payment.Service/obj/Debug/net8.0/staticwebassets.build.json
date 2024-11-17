@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "qhW23AOpB1LVKMEhI43gW2IsuzG9hQstP4Nc0tUHpA8=",
+  "Source": "CodeApp.Payment.Service",
+  "BasePath": "_content/CodeApp.Payment.Service",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

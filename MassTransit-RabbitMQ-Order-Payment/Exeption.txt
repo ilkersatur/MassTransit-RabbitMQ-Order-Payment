@@ -1,0 +1,21 @@
+﻿Ana kuyruğa baktığı için _error olan mesjları işlenemez.
+
+Consule edilemeyen ve kuyrukta bekleyen mesajları işleme ->
+
+Move messages
+
+To move messages, the shovel plugin must be enabled, try:
+
+$ rabbitmq-plugins enable rabbitmq_shovel rabbitmq_shovel_management
+
+
+--------------
+
+
+Move messages
+The shovel plugin can be used to move messages from this queue to another one. The form below will create a temporary shovel to move messages to another queue on the same virtual host, with default settings.
+
+For more options see the shovel interface.
+
+Destination queue:	
+notification.service.sendemailcommand

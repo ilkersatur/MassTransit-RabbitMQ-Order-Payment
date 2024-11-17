@@ -1,0 +1,12 @@
+C:\Users\ilkers\Desktop\MassTransit-RabbitMQ-Order-Payment\MassTransit-RabbitMQ-Order-Payment\CodeApp.Masstransit.Shared\bin\Debug\net8.0\CodeApp.Masstransit.Shared.deps.json
+C:\Users\ilkers\Desktop\MassTransit-RabbitMQ-Order-Payment\MassTransit-RabbitMQ-Order-Payment\CodeApp.Masstransit.Shared\bin\Debug\net8.0\CodeApp.Masstransit.Shared.dll
+C:\Users\ilkers\Desktop\MassTransit-RabbitMQ-Order-Payment\MassTransit-RabbitMQ-Order-Payment\CodeApp.Masstransit.Shared\bin\Debug\net8.0\CodeApp.Masstransit.Shared.pdb
+C:\Users\ilkers\Desktop\MassTransit-RabbitMQ-Order-Payment\MassTransit-RabbitMQ-Order-Payment\CodeApp.Masstransit.Shared\obj\Debug\net8.0\CodeApp.Masstransit.Shared.csproj.AssemblyReference.cache
+C:\Users\ilkers\Desktop\MassTransit-RabbitMQ-Order-Payment\MassTransit-RabbitMQ-Order-Payment\CodeApp.Masstransit.Shared\obj\Debug\net8.0\CodeApp.Masstransit.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ilkers\Desktop\MassTransit-RabbitMQ-Order-Payment\MassTransit-RabbitMQ-Order-Payment\CodeApp.Masstransit.Shared\obj\Debug\net8.0\CodeApp.Masstransit.Shared.AssemblyInfoInputs.cache
+C:\Users\ilkers\Desktop\MassTransit-RabbitMQ-Order-Payment\MassTransit-RabbitMQ-Order-Payment\CodeApp.Masstransit.Shared\obj\Debug\net8.0\CodeApp.Masstransit.Shared.AssemblyInfo.cs
+C:\Users\ilkers\Desktop\MassTransit-RabbitMQ-Order-Payment\MassTransit-RabbitMQ-Order-Payment\CodeApp.Masstransit.Shared\obj\Debug\net8.0\CodeApp.Masstransit.Shared.csproj.CoreCompileInputs.cache
+C:\Users\ilkers\Desktop\MassTransit-RabbitMQ-Order-Payment\MassTransit-RabbitMQ-Order-Payment\CodeApp.Masstransit.Shared\obj\Debug\net8.0\CodeApp.Masstransit.Shared.dll
+C:\Users\ilkers\Desktop\MassTransit-RabbitMQ-Order-Payment\MassTransit-RabbitMQ-Order-Payment\CodeApp.Masstransit.Shared\obj\Debug\net8.0\refint\CodeApp.Masstransit.Shared.dll
+C:\Users\ilkers\Desktop\MassTransit-RabbitMQ-Order-Payment\MassTransit-RabbitMQ-Order-Payment\CodeApp.Masstransit.Shared\obj\Debug\net8.0\CodeApp.Masstransit.Shared.pdb
+C:\Users\ilkers\Desktop\MassTransit-RabbitMQ-Order-Payment\MassTransit-RabbitMQ-Order-Payment\CodeApp.Masstransit.Shared\obj\Debug\net8.0\ref\CodeApp.Masstransit.Shared.dll

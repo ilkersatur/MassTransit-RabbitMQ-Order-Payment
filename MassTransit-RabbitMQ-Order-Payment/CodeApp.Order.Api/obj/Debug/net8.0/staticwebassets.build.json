@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "fq4h8qSJFn2lhsqlxLqP7O1sH39d/YO/cWWHe1wx2fQ=",
+  "Source": "CodeApp.Order.Api",
+  "BasePath": "_content/CodeApp.Order.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
